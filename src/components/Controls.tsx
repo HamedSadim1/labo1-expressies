@@ -1,3 +1,11 @@
+/**
+ * Controls Component - Bedieningselementen voor de applicatie
+ *
+ * Deze component bevat de gebruikersinterface voor:
+ * - Het instellen van het maximum aantal voor willekeurige getallen (via slider)
+ * - Het genereren van een nieuwe willekeurige berekening
+ * - Directe toegang tot de belangrijkste functies
+ */
 import React from "react";
 import { FaRedo } from "react-icons/fa";
 import { Button } from "./Button";

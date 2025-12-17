@@ -1,3 +1,9 @@
+/**
+ * NumberCards Component - Toont de twee willekeurige getallen in visuele kaarten
+ *
+ * Deze component toont getal1 en getal2 in aparte gekleurde kaarten
+ * met hover effecten voor een aantrekkelijke presentatie.
+ */
 import React from "react";
 
 interface NumberCardsProps {

@@ -1,3 +1,12 @@
+/**
+ * OperationDisplay Component - Toont de huidige wiskundige operatie met visuele elementen
+ *
+ * Deze component toont de gegenereerde operatie tussen twee getallen met:
+ * - Een geanimeerd icoon dat de operatie vertegenwoordigt
+ * - De volledige expressie (getal1 operatie getal2)
+ * - Het berekende resultaat
+ * - Kleurcodering gebaseerd op het operatie type
+ */
 import React from "react";
 import { Operation, Theme } from "../types";
 import { getOperationInfo } from "../utils/operations";

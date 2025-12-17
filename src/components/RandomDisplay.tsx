@@ -1,3 +1,10 @@
+/**
+ * RandomDisplay Component - Toont de willekeurige waarde die gebruikt wordt voor operatie selectie
+ *
+ * Deze component toont een visuele representatie van de random waarde
+ * die gebruikt wordt om de operatie te selecteren. De waarde wordt
+ * omgezet naar een geheel getal tussen 1-1000 voor betere leesbaarheid.
+ */
 import React from "react";
 import { FaDice } from "react-icons/fa";
 import { Theme } from "../types";

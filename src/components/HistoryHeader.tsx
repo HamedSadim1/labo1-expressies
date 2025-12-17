@@ -1,3 +1,9 @@
+/**
+ * HistoryHeader Component - Header sectie voor de geschiedenis lijst
+ *
+ * Toont de titel "Geschiedenis" met icoon en aantal entries,
+ * plus een export knop voor het downloaden van de geschiedenis als CSV.
+ */
 import React from "react";
 import { FaHistory, FaDownload } from "react-icons/fa";
 import { Button } from "./Button";

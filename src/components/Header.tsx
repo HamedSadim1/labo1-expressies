@@ -1,3 +1,12 @@
+/**
+ * Header Component - Toont de titel, icoon en dark mode toggle
+ *
+ * Deze component vormt de bovenste sectie van de applicatie met:
+ * - Een geanimeerd dobbelsteen icoon
+ * - De hoofdtitel "Labo 1 - Expressies"
+ * - Een beschrijving van de functionaliteit
+ * - Een toggle knop voor licht/donker modus
+ */
 import React from "react";
 import { FaDice, FaMoon, FaSun } from "react-icons/fa";
 import { Button } from "./Button";

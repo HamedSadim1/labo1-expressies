@@ -1,3 +1,10 @@
+/**
+ * Hoofdcomponent van de Expressie Calculator applicatie.
+ * Deze app genereert willekeurige wiskundige expressies met twee getallen en een operatie,
+ * toont de resultaten en houdt een geschiedenis bij van de laatste 10 berekeningen.
+ * Gebruikers kunnen het maximum aantal voor de getallen aanpassen, de weergave wisselen tussen licht en donker,
+ * en de geschiedenis exporteren naar een CSV-bestand.
+ */
 import { useState } from "react";
 import Header from "./components/Header";
 import RandomDisplay from "./components/RandomDisplay";
@@ -31,16 +38,37 @@ function App() {
 
   const currentOp = generateRandomOperation(operations, random);
 
+  /**
+   * toggleDarkMode - Wisselt tussen lichte en donkere modus
+   *
+   * Deze functie schakelt de darkMode state om en past de DOM class aan
+   * voor Tailwind CSS dark mode ondersteuning.
+   */
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle("dark");
   };
 
+  /**
+   * exportHistory - Exporteert de berekeningsgeschiedenis naar CSV
+   *
+   * Converteert de geschiedenis naar CSV formaat en download het bestand
+   * met de naam "berekeningen.csv".
+   */
   const exportHistory = () => {
     const csv = convertHistoryToCSV(history);
     downloadFile(csv, "berekeningen.csv", "text/csv;charset=utf-8;");
   };
 
+  /**
+   * generateNew - Genereert een nieuwe willekeurige berekening
+   *
+   * Deze functie:
+   * - Genereert nieuwe willekeurige getallen binnen het ingestelde maximum
+   * - Selecteert een willekeurige operatie
+   * - Berekent het resultaat
+   * - Voegt de berekening toe aan de geschiedenis (houdt laatste 10)
+   */
   const generateNew = () => {
     const newRandom = Math.random();
     const newGetal1 = generateRandomNumber(maxNumber);
